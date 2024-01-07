@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="'ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css'>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <canvas id="myChart"></canvas>
+    </div>
+    <script>
+        let myChart=document.getElementById('myChart').getContext('2d');
+
+        let employeesChart = new Chart(myChart, {
+            type:'doughnut', //bar, horizizontalBar, pie, line, doughnut, radar, polarArea
+            data:{
+                labels:['Bradke LLC', 'Champlin-Wiza','Steuber, Kiehn and Barrows', 'Marks Inc', 'Sipes and Sons'],
+                datasets:[{
+                    label:'stock_market_capitalization ($): ',
+                    data:[
+                    1658922.10,
+                    3997121.54,
+                    1572224.49,
+                    6022051.88,
+                    3835471.77
+
+                    ],
+                    backgroundColor:[
+                    'rgba(224, 75, 90)',
+                    'rgba(228, 151, 86)',
+                    'rgba(91, 48, 90)',
+                    'rgba(154, 76, 104)',
+                    '#3277DB'
+                    ],
+                    hoverOffset:4
+                }]
+            },
+            options:{}
+        });
+
+    </script>
+</body>
+</html>
