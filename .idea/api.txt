@@ -1,0 +1,4 @@
+https://my.api.mockaroo.com/ediproject.json?key=4ac89830
+
+
+curl -H "X-API-Key: 4ac89830" https://my.api.mockaroo.com/ediproject.json
